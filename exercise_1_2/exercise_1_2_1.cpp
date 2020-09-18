@@ -31,7 +31,7 @@ int main()
         list[start] = list[end];
         list[end] = temp;
         start++;
-        end--:
+        end--;
     }
     // Print the Reversed vector
     std::cout << "Reversed Vector: ";
