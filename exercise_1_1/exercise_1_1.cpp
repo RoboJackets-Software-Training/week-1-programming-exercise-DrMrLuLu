@@ -2,7 +2,7 @@
 #include <iostream>
 #include <vector>
 
-int main(int argc, char** argv) {
+int main() {
     std::cout << "Use the wasd keys and enter to input a direction, or the E key to stop" << std::endl;
 
     // Write your code for step 1 here
@@ -14,7 +14,7 @@ int main(int argc, char** argv) {
     wheel_speeds[3] = 0;
     // Do not edit the next 5 lines
     bool keep_going = true;
-    char direction = 0;
+    char direction;
 
     while (keep_going) {
         std::cin >> direction; //At the begining of every iteration look for an input from the user
@@ -53,7 +53,7 @@ int main(int argc, char** argv) {
         }
 
         for (int i = 0; i < 4; i++) {
-                std::cout << "wheel at index " << i << " has speed: " << wheel_speeds[i] << std::endl;
+            std::cout << "wheel at index " << i << " has speed: " << wheel_speeds[i] << std::endl;
         }
         
     }
