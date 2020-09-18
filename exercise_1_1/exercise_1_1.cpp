@@ -25,32 +25,37 @@ int main() {
             for(int i = 0; i < 4; i++) {
                 wheel_speeds[i] = 1;
             }
-        } else if(direction == 'a') {
+        } 
+        else if(direction == 'a') {
             wheel_speeds[0] = 0.5;
-            wheel_speeds[1] = 1;
             wheel_speeds[2] = 0.5;
+            wheel_speeds[1] = 1;
             wheel_speeds[3] = 1;
-        } else if(direction == 's') {
+        } 
+        else if(direction == 's') {
             for(int i = 0; i < 4; i++) {
                 wheel_speeds[i] = -1;
             }
-        } else if(direction == 'd') {
+        } 
+        else if(direction == 'd') {
             wheel_speeds[0] = 1;
-            wheel_speeds[1] = 0.5;
             wheel_speeds[2] = 1;
+            wheel_speeds[1] = 0.5;
             wheel_speeds[3] = 0.5;
-        } else if(direction == 'e') {
+        } 
+        else if(direction == 'e') {
             for(int i = 0; i < 4; i++) {
                 wheel_speeds[i] = 0;
             }
             std::cout << "Shutting Down" << std::endl;
             keep_going = false;
-        } else {
+        } 
+        else {
             std::cout << "Sorry, I didn't get that. Try again." << std::endl;
         }
         //
         for(int i = 0; i < 4; i++) {
-            std::cout << "Wheel at index " << i << " has speed " << wheel_speeds[i] << std::endl;
+            std::cout << "Wheel at index " << i << " has speed: " << wheel_speeds[i] << std::endl;
         }
     }
 
