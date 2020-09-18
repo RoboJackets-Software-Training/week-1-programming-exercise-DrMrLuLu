@@ -1,4 +1,4 @@
-#include <iostream>
+#4include <iostream>
 
 int main()
 {
@@ -11,6 +11,21 @@ int main()
 
     // Palindrome Check
     // WRITE YOUR PALINDROME CHECK HERE
-
+    int left  = 0;
+    int right = str.size() - 1;
+    bool is_palindrome = false;
+    while(left < right) {
+        if(str[left] != str[right]) {
+            is_palindrome  = false;
+            break;
+        }
+        left++;
+        right--;
+    }
+    if(is_palindrome) {
+        std::cout << str << " is a palindrome" << std::endl;
+    } else {
+        std::cout << str << " is NOT a palindrome" << std::endl;
+    }
     return 0;
 }
