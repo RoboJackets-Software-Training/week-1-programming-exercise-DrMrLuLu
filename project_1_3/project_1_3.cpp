@@ -74,7 +74,7 @@ int main() {
     y.push_back(numb);
   }
 
-  std::cout << "y: {";
+  std::cout << "{";
   for(int i = 0; i < y.size(); i++) {
     if(i != 0) {
       std::cout << ", ";
