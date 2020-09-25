@@ -34,12 +34,54 @@ int main() {
   x = readInVector(s);
   std::cin >> s;
   w = readInVector(s);
+  
 
   // TODO write your code here
   // =========== START =========
 
+  std::cout << "x: {";
+  for(int i = 0; i < x.size(); i++) {
+    if(i != 0) {
+      std::cout << ", ";
+    }
+    std::cout << x[i];
+  }
+  std::cout << "}" << std::endl;
+
+  std::cout << "w: {";
+  for(int i = 0; i < w.size(); i++) {
+    if(i != 0) {
+      std::cout << ", ";
+    }
+    std::cout << w[i];
+  }
+  std::cout << "}" << std::endl;
 
 
+  int offset = (w.size()-1)/2;
+
+  for(int i = 0; i < x.size(); i++) {
+    int numb = 0;
+    for(int j = 0; j < w.size(); j++) {
+      if(!pack_with_zeros && i - offset + j < 0) {
+        numb += x[0] * w[j];
+      } else if(!pack_with_zeros && i - offset + j >= x.size()) {
+        numb += x[x.size()-1] * w[j];
+      } else {
+        numb += x[i - offset + j]*w[j];
+      }
+    }
+    y.push_back(numb);
+  }
+
+  std::cout << "{";
+  for(int i = 0; i < y.size(); i++) {
+    if(i != 0) {
+      std::cout << ", ";
+    }
+    std::cout << y[i];
+  }
+  std::cout << "}" << std::endl;
 
   // =========== END ===========
 
